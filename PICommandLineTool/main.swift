@@ -10,13 +10,8 @@ import Foundation
 
 private var stderr = FileHandle.standardError
 
-func start() {
-    
+func start() {    
     let arguements = CommandLine.arguments
-    for arguement in arguements {
-        stderr.write(arguement)
-    }
-    
     guard arguements.count > 1 else {
         stderr.write("Expecting path argument!")
         exit(EXIT_FAILURE)

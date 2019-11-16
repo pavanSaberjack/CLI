@@ -11,9 +11,9 @@ extension FileManager {
     //
     // Check if NSURL is a directory
     //
-    class public func fileIsDir(fileURL: NSURL) -> Bool {
+    class public func fileIsDir(fileURL: URL) -> Bool {
         var isDir: ObjCBool = false;
-        FileManager.default.fileExists(atPath: fileURL.path!, isDirectory: &isDir)
+        FileManager.default.fileExists(atPath: fileURL.path, isDirectory: &isDir)
         return isDir.boolValue
     }
     
