@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B5447213237E79760023BC16 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447212237E79760023BC16 /* main.swift */; };
+		B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447244237E9DC90023BC16 /* CommandLineTool.swift */; };
+		B5447247237E9FA40023BC16 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447246237E9FA40023BC16 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		B544720F237E79760023BC16 /* PICommandLineTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PICommandLineTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5447212237E79760023BC16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B5447244237E9DC90023BC16 /* CommandLineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineTool.swift; sourceTree = "<group>"; };
+		B5447246237E9FA40023BC16 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				B5447212237E79760023BC16 /* main.swift */,
+				B5447246237E9FA40023BC16 /* Extensions.swift */,
+				B5447244237E9DC90023BC16 /* CommandLineTool.swift */,
 			);
 			path = PICommandLineTool;
 			sourceTree = "<group>";
@@ -72,6 +78,7 @@
 				B544720B237E79760023BC16 /* Sources */,
 				B544720C237E79760023BC16 /* Frameworks */,
 				B544720D237E79760023BC16 /* CopyFiles */,
+				B5447219237E7A9E0023BC16 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -115,12 +122,34 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5447219237E7A9E0023BC16 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ${BUILT_PRODUCTS_DIR}/PICommandLineTool ${PROJECT_DIR}/bin\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B544720B237E79760023BC16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B5447213237E79760023BC16 /* main.swift in Sources */,
+				B5447247237E9FA40023BC16 /* Extensions.swift in Sources */,
+				B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
