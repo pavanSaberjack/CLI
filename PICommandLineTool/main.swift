@@ -8,5 +8,17 @@
 
 import Foundation
 
+private var stderr = FileHandle.standardError
+
+func start() {
+    
+    let arguements = CommandLine.arguments
+    stderr.write(arguements.first ?? "")
+            
+    let cli = CLI()
+//    cli.run(at: <#T##URL#>)
+}
+
+start()
 
 
