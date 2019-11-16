@@ -27,6 +27,38 @@ extension FileManager {
     }
 }
 
+extension String {
+    var verifyUrl: Bool {
+        get {
+            let url = URL(string: self)
+
+            if url == nil || NSData(contentsOf: url!) == nil {
+                return false
+            } else {
+                return true
+            }
+        }
+    }
+    
+    var validFileURL: Bool {
+        get {
+            let url = URL(fileURLWithPath: self)
+            return FileManager.default.fileExists(atPath: url.absoluteString)
+        }
+    }
+}
+
+extension URL {
+    var verifyUrl: Bool {
+        get {
+            if NSData(contentsOf: self) == nil {
+                return false
+            } else {
+                return true
+            }
+        }
+    }
+}
 
 
 

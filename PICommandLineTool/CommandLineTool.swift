@@ -14,7 +14,11 @@ extension CLI {
 
 //pragma MARK: Public interface methods
 extension CLI {
-    public func run(at path: URL) {
+    public func run(at pathURL: URL) {
         stderr.write("Hello")
+    }
+    
+    public func run(at path: String) {
+        run(at: URL(fileURLWithPath: path))
     }
 }
