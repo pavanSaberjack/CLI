@@ -10,6 +10,7 @@
 		B5447213237E79760023BC16 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447212237E79760023BC16 /* main.swift */; };
 		B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447244237E9DC90023BC16 /* CommandLineTool.swift */; };
 		B5447247237E9FA40023BC16 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447246237E9FA40023BC16 /* Extensions.swift */; };
+		B5447249237FEFA10023BC16 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447248237FEFA10023BC16 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		B5447212237E79760023BC16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B5447244237E9DC90023BC16 /* CommandLineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineTool.swift; sourceTree = "<group>"; };
 		B5447246237E9FA40023BC16 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B5447248237FEFA10023BC16 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				B5447212237E79760023BC16 /* main.swift */,
 				B5447246237E9FA40023BC16 /* Extensions.swift */,
 				B5447244237E9DC90023BC16 /* CommandLineTool.swift */,
+				B5447248237FEFA10023BC16 /* Parser.swift */,
 			);
 			path = PICommandLineTool;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5447249237FEFA10023BC16 /* Parser.swift in Sources */,
 				B5447213237E79760023BC16 /* main.swift in Sources */,
 				B5447247237E9FA40023BC16 /* Extensions.swift in Sources */,
 				B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */,

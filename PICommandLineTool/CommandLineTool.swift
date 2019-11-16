@@ -43,6 +43,7 @@ extension CLI {
                 // parse all the folders
                 parse(at: content)
             } else {
+                Parser.parse(at: content)
                 stderr.write(content.lastPathComponent)
             }
         }
