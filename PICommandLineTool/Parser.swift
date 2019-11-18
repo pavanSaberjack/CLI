@@ -8,10 +8,10 @@
 
 import Foundation
 
-enum Expression: String {
-    case print
-    case todo
-    case multipleNewLine
+enum RegexExpression: String {
+    case print = "print([^)])"
+    case todo = "todo"
+    case multipleNewLine = "\n\n+\n"
 }
 
 
@@ -33,11 +33,10 @@ private func checkForMatches(at path: URL) {
     
     do {
         let fileContents: String = try String(contentsOfFile: path.path, encoding: .utf8)
-        let updatedContents = fileContents.replacingOccurrences(of: "\n\n+\n", with: "\n\n", options: [.regularExpression])
-        print(updatedContents)
+        
         
         let regex = try NSRegularExpression(pattern: "\n\n+\n", options: NSRegularExpression.Options.caseInsensitive)
-        let matches = regex.matches(in: fileContents, options: [], range: NSRange(location: 0, length: fileContents.utf16.count))
+        let matches = regex.matches(in: fileContents)
 
         print(matches)
 
