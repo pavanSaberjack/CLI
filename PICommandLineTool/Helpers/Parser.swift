@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum RegexExpression: String {
-    case print = "print([^)])"
-    case todo = "todo"
-    case multipleNewLine = "\n\n+\n"
-}
-
-
 public struct Parser {
     public static func parse(at path: URL) {
         readFile(at: path)
