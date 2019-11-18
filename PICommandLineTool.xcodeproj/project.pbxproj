@@ -71,10 +71,10 @@
 		B5447211237E79760023BC16 /* PICommandLineTool */ = {
 			isa = PBXGroup;
 			children = (
+				B5447256238274980023BC16 /* Helpers */,
+				B54472552382748E0023BC16 /* CommandLineTool */,
 				B544724A2382734A0023BC16 /* Extensions */,
 				B5447212237E79760023BC16 /* main.swift */,
-				B5447244237E9DC90023BC16 /* CommandLineTool.swift */,
-				B5447248237FEFA10023BC16 /* Parser.swift */,
 			);
 			path = PICommandLineTool;
 			sourceTree = "<group>";
@@ -89,6 +89,22 @@
 				B54472532382741B0023BC16 /* URL+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B54472552382748E0023BC16 /* CommandLineTool */ = {
+			isa = PBXGroup;
+			children = (
+				B5447244237E9DC90023BC16 /* CommandLineTool.swift */,
+			);
+			path = CommandLineTool;
+			sourceTree = "<group>";
+		};
+		B5447256238274980023BC16 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B5447248237FEFA10023BC16 /* Parser.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
