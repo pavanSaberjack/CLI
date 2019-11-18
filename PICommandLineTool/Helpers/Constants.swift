@@ -13,3 +13,9 @@ enum RegexExpression: String {
     case todo = "todo"
     case multipleNewLine = "\n\n+\n"
 }
+
+enum FileExtension: String {
+    case swift = "swift"
+    case txt = "txt"
+    case json = "json"
+}

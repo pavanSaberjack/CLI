@@ -2,6 +2,8 @@
 import Foundation
 
 private var stderr = FileHandle.standardError
+private var allowedFileTypes: [FileExtension] = [.swift]
+private var appliedRules: [RegexExpression] = [.multipleNewLine]
 
 class CLI {
     
@@ -53,6 +55,10 @@ extension CLI {
 //pragma MARK: Public interface methods
 extension CLI {
     public func run(at pathURL: URL) {
+        
+        // Read other arguements
+        Config.createConfig(at: pathURL)
+        
         parse(at: pathURL)
     }
     

@@ -16,6 +16,7 @@
 		B54472522382740A0023BC16 /* FileHandle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54472512382740A0023BC16 /* FileHandle+extension.swift */; };
 		B54472542382741B0023BC16 /* URL+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54472532382741B0023BC16 /* URL+extension.swift */; };
 		B5447258238275660023BC16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447257238275660023BC16 /* Constants.swift */; };
+		B544725B238292DC0023BC16 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544725A238292DC0023BC16 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		B54472512382740A0023BC16 /* FileHandle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileHandle+extension.swift"; sourceTree = "<group>"; };
 		B54472532382741B0023BC16 /* URL+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+extension.swift"; sourceTree = "<group>"; };
 		B5447257238275660023BC16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B544725A238292DC0023BC16 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		B5447211237E79760023BC16 /* PICommandLineTool */ = {
 			isa = PBXGroup;
 			children = (
+				B544725923828C1F0023BC16 /* Config */,
 				B5447256238274980023BC16 /* Helpers */,
 				B54472552382748E0023BC16 /* CommandLineTool */,
 				B544724A2382734A0023BC16 /* Extensions */,
@@ -108,6 +111,14 @@
 				B5447257238275660023BC16 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B544725923828C1F0023BC16 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B544725A238292DC0023BC16 /* Config.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				B544724E2382738F0023BC16 /* NSRegularExpression+Extension.swift in Sources */,
 				B544724C238273680023BC16 /* String+extension.swift in Sources */,
 				B5447213237E79760023BC16 /* main.swift in Sources */,
+				B544725B238292DC0023BC16 /* Config.swift in Sources */,
 				B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */,
 				B5447258238275660023BC16 /* Constants.swift in Sources */,
 			);
