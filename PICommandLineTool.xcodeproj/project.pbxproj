@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		B5447213237E79760023BC16 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447212237E79760023BC16 /* main.swift */; };
 		B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447244237E9DC90023BC16 /* CommandLineTool.swift */; };
-		B5447247237E9FA40023BC16 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447246237E9FA40023BC16 /* Extensions.swift */; };
 		B5447249237FEFA10023BC16 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447248237FEFA10023BC16 /* Parser.swift */; };
+		B544724C238273680023BC16 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544724B238273680023BC16 /* String+extension.swift */; };
+		B544724E2382738F0023BC16 /* NSRegularExpression+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544724D2382738F0023BC16 /* NSRegularExpression+Extension.swift */; };
+		B5447250238273F60023BC16 /* FileManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544724F238273F60023BC16 /* FileManager+extension.swift */; };
+		B54472522382740A0023BC16 /* FileHandle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54472512382740A0023BC16 /* FileHandle+extension.swift */; };
+		B54472542382741B0023BC16 /* URL+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54472532382741B0023BC16 /* URL+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +33,12 @@
 		B544720F237E79760023BC16 /* PICommandLineTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PICommandLineTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5447212237E79760023BC16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B5447244237E9DC90023BC16 /* CommandLineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineTool.swift; sourceTree = "<group>"; };
-		B5447246237E9FA40023BC16 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B5447248237FEFA10023BC16 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		B544724B238273680023BC16 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		B544724D2382738F0023BC16 /* NSRegularExpression+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Extension.swift"; sourceTree = "<group>"; };
+		B544724F238273F60023BC16 /* FileManager+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+extension.swift"; sourceTree = "<group>"; };
+		B54472512382740A0023BC16 /* FileHandle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileHandle+extension.swift"; sourceTree = "<group>"; };
+		B54472532382741B0023BC16 /* URL+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +71,24 @@
 		B5447211237E79760023BC16 /* PICommandLineTool */ = {
 			isa = PBXGroup;
 			children = (
+				B544724A2382734A0023BC16 /* Extensions */,
 				B5447212237E79760023BC16 /* main.swift */,
-				B5447246237E9FA40023BC16 /* Extensions.swift */,
 				B5447244237E9DC90023BC16 /* CommandLineTool.swift */,
 				B5447248237FEFA10023BC16 /* Parser.swift */,
 			);
 			path = PICommandLineTool;
+			sourceTree = "<group>";
+		};
+		B544724A2382734A0023BC16 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B544724B238273680023BC16 /* String+extension.swift */,
+				B544724D2382738F0023BC16 /* NSRegularExpression+Extension.swift */,
+				B544724F238273F60023BC16 /* FileManager+extension.swift */,
+				B54472512382740A0023BC16 /* FileHandle+extension.swift */,
+				B54472532382741B0023BC16 /* URL+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5447249237FEFA10023BC16 /* Parser.swift in Sources */,
+				B54472522382740A0023BC16 /* FileHandle+extension.swift in Sources */,
+				B5447250238273F60023BC16 /* FileManager+extension.swift in Sources */,
+				B54472542382741B0023BC16 /* URL+extension.swift in Sources */,
+				B544724E2382738F0023BC16 /* NSRegularExpression+Extension.swift in Sources */,
+				B544724C238273680023BC16 /* String+extension.swift in Sources */,
 				B5447213237E79760023BC16 /* main.swift in Sources */,
-				B5447247237E9FA40023BC16 /* Extensions.swift in Sources */,
 				B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
