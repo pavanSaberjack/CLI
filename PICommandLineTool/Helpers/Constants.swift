@@ -12,26 +12,17 @@ public enum Rule: String {
     case print = "print"
     case todo = "todo"
     case multipleNewLine = "multipleNewLine"
-    
-    func expression() -> String {
+}
+
+extension Rule {
+    func expression() -> [(String, String)] {
         switch self {
         case .multipleNewLine:
-            return "\n\n+\n"
+            return [("\\n +\\n", "\n"), ("\n\n+\n", "\n\n")]
         case .print:
-            return "print([^)])"
+            return [("print\\(.*\\)", "")]
         case .todo:
-            return "todo"
-        }
-    }
-    
-    func replacement() -> String {
-        switch self {
-        case .multipleNewLine:
-            return "\n\n"
-        case .print:
-            return ""
-        case .todo:
-            return ""
+            return [("todo", "")]
         }
     }
 }

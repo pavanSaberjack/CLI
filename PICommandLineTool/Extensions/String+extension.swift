@@ -34,4 +34,15 @@ extension String {
         let range = NSRange(location: 0, length: lhs.utf16.count)
         return regex.firstMatch(in: lhs, options: [], range: range) != nil
     }
+    
+    func containMatch(regex: String) -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: regex, options: NSRegularExpression.Options.caseInsensitive)
+            let matches = regex.matches(in: self)
+            return matches.count > 0
+        } catch let error {
+            print(error)
+        }
+        return false
+    }
 }

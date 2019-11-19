@@ -45,12 +45,16 @@ extension CLI {
                 parse(at: content)
             } else {
                 
-                guard let config = config else { return }
-                guard let fileFormat = FileExtension(rawValue: content.pathExtension) else { return }
-                if config.enabledFileFormats.contains(fileFormat) {
+                if content.lastPathComponent == "Parser.swift" {
                     Parser.parse(at: content, config: config)
-                    stderr.write(content.lastPathComponent)
                 }
+                
+//                guard let config = config else { return }
+//                guard let fileFormat = FileExtension(rawValue: content.pathExtension) else { return }
+//                if config.enabledFileFormats.contains(fileFormat) {
+//                    Parser.parse(at: content, config: config)
+//                    stderr.write(content.lastPathComponent)
+//                }
             }
         }
     }
