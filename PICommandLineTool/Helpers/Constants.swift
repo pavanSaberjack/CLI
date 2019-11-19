@@ -18,7 +18,7 @@ extension Rule {
     func expression() -> [(String, String)] {
         switch self {
         case .multipleNewLine:
-            return [("\\n +\\n", "\n"), ("\n\n+\n", "\n\n")]
+            return [("\\n +\\n", "\n\n"), ("\n{3,}", "\n\n")]
         case .print:
             return [("print\\(.*\\)", "")]
         case .todo:

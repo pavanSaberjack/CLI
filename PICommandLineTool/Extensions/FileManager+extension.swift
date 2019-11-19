@@ -17,7 +17,6 @@ extension FileManager {
         FileManager.default.fileExists(atPath: fileURL.path, isDirectory: &isDir)
         return isDir.boolValue
     }
-    
     //
     // Check if a path is a directory
     //

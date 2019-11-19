@@ -17,14 +17,12 @@ extension CLI {
             .isAliasFileKey, .isSymbolicLinkKey,
             .creationDateKey, .nameKey,
         ]
-        
         let enumerationOptions: FileManager.DirectoryEnumerationOptions
         #if os(macOS)
             enumerationOptions = .skipsHiddenFiles
         #else
             enumerationOptions = []
         #endif
-                
         do {
             return try FileManager.default.contentsOfDirectory(at: pathURL, includingPropertiesForKeys: keys, options: enumerationOptions)
         } catch let error {
@@ -32,29 +30,26 @@ extension CLI {
             return nil
         }
     }
-    
+
     private func parse(at pathURL: URL) {
         let contents = getContent(at: pathURL)
         guard let contentURLs = contents else {
             return
         }
-        
         for content in contentURLs {
             if FileManager.fileIsDir(fileURL: content) {
                 // parse all the folders
                 parse(at: content)
             } else {
-                
-                if content.lastPathComponent == "Parser.swift" {
-                    Parser.parse(at: content, config: config)
-                }
-                
-//                guard let config = config else { return }
-//                guard let fileFormat = FileExtension(rawValue: content.pathExtension) else { return }
-//                if config.enabledFileFormats.contains(fileFormat) {
+//                if content.lastPathComponent == "Parser.swift" {
 //                    Parser.parse(at: content, config: config)
-//                    stderr.write(content.lastPathComponent)
 //                }
+                guard let config = config else { return }
+                guard let fileFormat = FileExtension(rawValue: content.pathExtension) else { return }
+                if config.enabledFileFormats.contains(fileFormat) {
+                    Parser.parse(at: content, config: config)
+                    stderr.write(content.lastPathComponent)
+                }
             }
         }
     }
