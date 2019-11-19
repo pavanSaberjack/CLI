@@ -8,10 +8,32 @@
 
 import Foundation
 
-enum RegexExpression: String {
-    case print = "print([^)])"
+public enum Rule: String {
+    case print = "print"
     case todo = "todo"
-    case multipleNewLine = "\n\n+\n"
+    case multipleNewLine = "multipleNewLine"
+    
+    func expression() -> String {
+        switch self {
+        case .multipleNewLine:
+            return "\n\n+\n"
+        case .print:
+            return "print([^)])"
+        case .todo:
+            return "todo"
+        }
+    }
+    
+    func replacement() -> String {
+        switch self {
+        case .multipleNewLine:
+            return "\n\n"
+        case .print:
+            return ""
+        case .todo:
+            return ""
+        }
+    }
 }
 
 enum FileExtension: String {

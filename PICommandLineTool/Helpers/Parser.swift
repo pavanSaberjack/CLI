@@ -9,8 +9,8 @@
 import Foundation
 
 public struct Parser {
-    public static func parse(at path: URL) {
-        readFile(at: path)
+    public static func parse(at path: URL, config: Config?) {
+        readFile(at: path, config: config)
         
 //        guard let sampleData = "// this is comment".data(using: .utf8) else { return }
 //
@@ -45,15 +45,23 @@ private func checkForMatches(at path: URL) {
     }
 }
 
-private func readFile(at path: URL) {
+private func readFile(at path: URL, config: Config?) {
     do {
-        let fileContents: String = try String(contentsOfFile: path.path, encoding: .utf8)
-        let updatedContents = fileContents.replacingOccurrences(of: "\n\n+\n", with: "\n\n", options: [.regularExpression])
-        print(updatedContents)
+        var fileContents: String = try String(contentsOfFile: path.path, encoding: .utf8)
+        
+        guard let config = config else { return }
+        
+        for rule in config.enabledRules {
+            fileContents = fileContents.replacingOccurrences(of: rule.expression(), with: rule.replacement(), options: [.regularExpression])
+        }
+//        let updatedContents = fileContents.replacingOccurrences(of: "\n\n+\n", with: "\n\n", options: [.regularExpression])
+        print(fileContents)
     } catch {
         print(error)
     }
 }
+
+
 
 private func matches(for regex: String, in text: String) -> [String] {
     do {
@@ -65,4 +73,8 @@ private func matches(for regex: String, in text: String) -> [String] {
         print("invalid regex: \(error.localizedDescription)")
         return []
     }
+}
+
+private func applyRule(rule: Rule) -> String {
+    return ""
 }

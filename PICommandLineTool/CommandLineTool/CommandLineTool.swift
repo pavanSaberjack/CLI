@@ -3,15 +3,14 @@ import Foundation
 
 private var stderr = FileHandle.standardError
 private var allowedFileTypes: [FileExtension] = [.swift]
-private var appliedRules: [RegexExpression] = [.multipleNewLine]
+private var appliedRules: [Rule] = [.multipleNewLine]
 
 class CLI {
-    
+    private var config: Config?
 }
 
 //pragma MARK: Private interface methods
 extension CLI {
-    
     private func getContent(at pathURL: URL) -> [URL]? {
         let keys: [URLResourceKey] = [
             .isRegularFileKey, .isDirectoryKey,
@@ -45,7 +44,7 @@ extension CLI {
                 // parse all the folders
                 parse(at: content)
             } else {
-                Parser.parse(at: content)
+                Parser.parse(at: content, config: config)
                 stderr.write(content.lastPathComponent)
             }
         }
@@ -55,10 +54,8 @@ extension CLI {
 //pragma MARK: Public interface methods
 extension CLI {
     public func run(at pathURL: URL) {
-        
         // Read other arguements
-        Config.createConfig(at: pathURL)
-        
+        config = Config.createConfig(at: pathURL)
         parse(at: pathURL)
     }
     
