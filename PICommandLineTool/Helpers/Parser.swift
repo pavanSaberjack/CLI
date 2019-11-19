@@ -23,16 +23,13 @@ public struct Parser {
 }
 
 private func checkForMatches(at path: URL) {
-    
     do {
         let fileContents: String = try String(contentsOfFile: path.path, encoding: .utf8)
         
-        
-        let regex = try NSRegularExpression(pattern: "\n\n+\n", options: NSRegularExpression.Options.caseInsensitive)
+        let regex = try NSRegularExpression(pattern: "\n{2}+\n", options: NSRegularExpression.Options.caseInsensitive)
         let matches = regex.matches(in: fileContents)
-
-        print(matches)
-
+        print(matches.count)
+        print(fileContents)
         for match in matches {
             print(match.range)
             let range = match.range
@@ -46,8 +43,13 @@ private func checkForMatches(at path: URL) {
 }
 
 private func readFile(at path: URL, config: Config?) {
+    
+    print("File name is : \(path.lastPathComponent)")
+    
     do {
         var fileContents: String = try String(contentsOfFile: path.path, encoding: .utf8)
+        
+        checkForMatches(at: path)
         
         guard let config = config else { return }
         
@@ -55,13 +57,20 @@ private func readFile(at path: URL, config: Config?) {
             fileContents = fileContents.replacingOccurrences(of: rule.expression(), with: rule.replacement(), options: [.regularExpression])
         }
 //        let updatedContents = fileContents.replacingOccurrences(of: "\n\n+\n", with: "\n\n", options: [.regularExpression])
-        print(fileContents)
+//        print(fileContents)
+        
+        do {
+            try fileContents.write(to: path, atomically: false, encoding: .utf8)
+        } catch let error {
+            print(error)
+        }
+        
+        
+        
     } catch {
         print(error)
     }
 }
-
-
 
 private func matches(for regex: String, in text: String) -> [String] {
     do {

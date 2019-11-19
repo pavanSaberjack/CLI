@@ -12,8 +12,6 @@ enum ConfigFileName: String {
     case rules = ".formatter.yml"
 }
 
-
-
 enum ParseType: String {
     case none = ""
     case rules = "rules:"
@@ -115,9 +113,7 @@ public struct Config {
                         }
                     }
                 }
-            }
-            
-            print(lines)
+            }            
         } catch let error {
             print(error)
         }

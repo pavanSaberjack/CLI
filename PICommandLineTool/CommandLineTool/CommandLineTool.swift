@@ -44,8 +44,13 @@ extension CLI {
                 // parse all the folders
                 parse(at: content)
             } else {
-                Parser.parse(at: content, config: config)
-                stderr.write(content.lastPathComponent)
+                
+                guard let config = config else { return }
+                guard let fileFormat = FileExtension(rawValue: content.pathExtension) else { return }
+                if config.enabledFileFormats.contains(fileFormat) {
+                    Parser.parse(at: content, config: config)
+                    stderr.write(content.lastPathComponent)
+                }
             }
         }
     }
