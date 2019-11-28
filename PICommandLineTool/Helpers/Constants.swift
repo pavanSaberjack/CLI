@@ -12,6 +12,7 @@ public enum Rule: String {
     case print = "print"
     case todo = "todo"
     case multipleNewLine = "multipleNewLine"
+    case removeCommentedCode = "removeCommentedCode"
 }
 
 extension Rule {
@@ -23,6 +24,8 @@ extension Rule {
             return [("print\\(.*\\)", "")]
         case .todo:
             return [("todo", "")]
+        case .removeCommentedCode:
+            return [("\\/\\/.*\n", "")]
         }
     }
 }
