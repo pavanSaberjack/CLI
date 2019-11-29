@@ -10,12 +10,14 @@ import Foundation
 
 private var stderr = FileHandle.standardError
 
-func start() {    
+func start() {
+    
     let arguements = CommandLine.arguments
     guard arguements.count > 1 else {
         stderr.write("Expecting path argument!")
         exit(EXIT_FAILURE)
     }
+    
     let folderPath = arguements[1]
     // TODO: handle validating of url path
 //    guard folderPath.validFileURL else {

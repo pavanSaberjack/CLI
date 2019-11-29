@@ -21,7 +21,7 @@ extension Rule {
         case .multipleNewLine:
             return [("\\n +\\n", "\n\n"), ("\n{3,}", "\n\n")]
         case .print:
-            return [("print\\(.*\\)", "")]
+            return [(" *\\t*print\\(.*\\)\\n", "")]
         case .todo:
             return [("todo", "")]
         case .removeCommentedCode:
