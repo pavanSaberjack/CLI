@@ -9,7 +9,17 @@
 /* Begin PBXBuildFile section */
 		B5447213237E79760023BC16 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447212237E79760023BC16 /* main.swift */; };
 		B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447244237E9DC90023BC16 /* CommandLineTool.swift */; };
-		B5447247237E9FA40023BC16 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447246237E9FA40023BC16 /* Extensions.swift */; };
+		B5447249237FEFA10023BC16 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447248237FEFA10023BC16 /* Parser.swift */; };
+		B544724C238273680023BC16 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544724B238273680023BC16 /* String+extension.swift */; };
+		B544724E2382738F0023BC16 /* NSRegularExpression+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544724D2382738F0023BC16 /* NSRegularExpression+Extension.swift */; };
+		B5447250238273F60023BC16 /* FileManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544724F238273F60023BC16 /* FileManager+extension.swift */; };
+		B54472522382740A0023BC16 /* FileHandle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54472512382740A0023BC16 /* FileHandle+extension.swift */; };
+		B54472542382741B0023BC16 /* URL+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54472532382741B0023BC16 /* URL+extension.swift */; };
+		B5447258238275660023BC16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5447257238275660023BC16 /* Constants.swift */; };
+		B544725B238292DC0023BC16 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544725A238292DC0023BC16 /* Config.swift */; };
+		B5F6C6F52399085000004C16 /* PICommandLineToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6C6F42399085000004C16 /* PICommandLineToolTests.swift */; };
+		B5F6C6FC23990EFC00004C16 /* ConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6C6FB23990EFC00004C16 /* ConfigTests.swift */; };
+		B5F6C6FE239914DE00004C16 /* CommonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6C6FD239914DE00004C16 /* CommonHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,11 +38,30 @@
 		B544720F237E79760023BC16 /* PICommandLineTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PICommandLineTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5447212237E79760023BC16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B5447244237E9DC90023BC16 /* CommandLineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineTool.swift; sourceTree = "<group>"; };
-		B5447246237E9FA40023BC16 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B5447248237FEFA10023BC16 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		B544724B238273680023BC16 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		B544724D2382738F0023BC16 /* NSRegularExpression+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Extension.swift"; sourceTree = "<group>"; };
+		B544724F238273F60023BC16 /* FileManager+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+extension.swift"; sourceTree = "<group>"; };
+		B54472512382740A0023BC16 /* FileHandle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileHandle+extension.swift"; sourceTree = "<group>"; };
+		B54472532382741B0023BC16 /* URL+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+extension.swift"; sourceTree = "<group>"; };
+		B5447257238275660023BC16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B544725A238292DC0023BC16 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B5F6C6F22399085000004C16 /* PICommandLineToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PICommandLineToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F6C6F42399085000004C16 /* PICommandLineToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PICommandLineToolTests.swift; sourceTree = "<group>"; };
+		B5F6C6F62399085000004C16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5F6C6FB23990EFC00004C16 /* ConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigTests.swift; sourceTree = "<group>"; };
+		B5F6C6FD239914DE00004C16 /* CommonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B544720C237E79760023BC16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F6C6EF2399085000004C16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				B5447211237E79760023BC16 /* PICommandLineTool */,
+				B5F6C6F32399085000004C16 /* PICommandLineToolTests */,
 				B5447210237E79760023BC16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B544720F237E79760023BC16 /* PICommandLineTool */,
+				B5F6C6F22399085000004C16 /* PICommandLineToolTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,11 +92,69 @@
 		B5447211237E79760023BC16 /* PICommandLineTool */ = {
 			isa = PBXGroup;
 			children = (
+				B544725923828C1F0023BC16 /* Config */,
+				B5447256238274980023BC16 /* Helpers */,
+				B54472552382748E0023BC16 /* CommandLineTool */,
+				B544724A2382734A0023BC16 /* Extensions */,
 				B5447212237E79760023BC16 /* main.swift */,
-				B5447246237E9FA40023BC16 /* Extensions.swift */,
-				B5447244237E9DC90023BC16 /* CommandLineTool.swift */,
 			);
 			path = PICommandLineTool;
+			sourceTree = "<group>";
+		};
+		B544724A2382734A0023BC16 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B544724B238273680023BC16 /* String+extension.swift */,
+				B544724D2382738F0023BC16 /* NSRegularExpression+Extension.swift */,
+				B544724F238273F60023BC16 /* FileManager+extension.swift */,
+				B54472512382740A0023BC16 /* FileHandle+extension.swift */,
+				B54472532382741B0023BC16 /* URL+extension.swift */,
+				B5F6C6FD239914DE00004C16 /* CommonHelper.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B54472552382748E0023BC16 /* CommandLineTool */ = {
+			isa = PBXGroup;
+			children = (
+				B5447244237E9DC90023BC16 /* CommandLineTool.swift */,
+			);
+			path = CommandLineTool;
+			sourceTree = "<group>";
+		};
+		B5447256238274980023BC16 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B5447248237FEFA10023BC16 /* Parser.swift */,
+				B5447257238275660023BC16 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B544725923828C1F0023BC16 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B544725A238292DC0023BC16 /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B5F6C6F32399085000004C16 /* PICommandLineToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6C6FA23990ED400004C16 /* Config */,
+				B5F6C6F42399085000004C16 /* PICommandLineToolTests.swift */,
+				B5F6C6F62399085000004C16 /* Info.plist */,
+			);
+			path = PICommandLineToolTests;
+			sourceTree = "<group>";
+		};
+		B5F6C6FA23990ED400004C16 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6C6FB23990EFC00004C16 /* ConfigTests.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +178,23 @@
 			productReference = B544720F237E79760023BC16 /* PICommandLineTool */;
 			productType = "com.apple.product-type.tool";
 		};
+		B5F6C6F12399085000004C16 /* PICommandLineToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5F6C6F92399085000004C16 /* Build configuration list for PBXNativeTarget "PICommandLineToolTests" */;
+			buildPhases = (
+				B5F6C6EE2399085000004C16 /* Sources */,
+				B5F6C6EF2399085000004C16 /* Frameworks */,
+				B5F6C6F02399085000004C16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PICommandLineToolTests;
+			productName = PICommandLineToolTests;
+			productReference = B5F6C6F22399085000004C16 /* PICommandLineToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +206,9 @@
 				ORGANIZATIONNAME = "Pavan Itagi";
 				TargetAttributes = {
 					B544720E237E79760023BC16 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					B5F6C6F12399085000004C16 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -118,9 +227,20 @@
 			projectRoot = "";
 			targets = (
 				B544720E237E79760023BC16 /* PICommandLineTool */,
+				B5F6C6F12399085000004C16 /* PICommandLineToolTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5F6C6F02399085000004C16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		B5447219237E7A9E0023BC16 /* ShellScript */ = {
@@ -147,9 +267,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5447249237FEFA10023BC16 /* Parser.swift in Sources */,
+				B5F6C6FE239914DE00004C16 /* CommonHelper.swift in Sources */,
+				B54472522382740A0023BC16 /* FileHandle+extension.swift in Sources */,
+				B5447250238273F60023BC16 /* FileManager+extension.swift in Sources */,
+				B54472542382741B0023BC16 /* URL+extension.swift in Sources */,
+				B544724E2382738F0023BC16 /* NSRegularExpression+Extension.swift in Sources */,
+				B544724C238273680023BC16 /* String+extension.swift in Sources */,
 				B5447213237E79760023BC16 /* main.swift in Sources */,
-				B5447247237E9FA40023BC16 /* Extensions.swift in Sources */,
+				B544725B238292DC0023BC16 /* Config.swift in Sources */,
 				B5447245237E9DC90023BC16 /* CommandLineTool.swift in Sources */,
+				B5447258238275660023BC16 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F6C6EE2399085000004C16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F6C6F52399085000004C16 /* PICommandLineToolTests.swift in Sources */,
+				B5F6C6FC23990EFC00004C16 /* ConfigTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +428,42 @@
 			};
 			name = Release;
 		};
+		B5F6C6F72399085000004C16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J67TP5L7UM;
+				INFOPLIST_FILE = PICommandLineToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavan.PICommandLineToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B5F6C6F82399085000004C16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J67TP5L7UM;
+				INFOPLIST_FILE = PICommandLineToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavan.PICommandLineToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -308,6 +481,15 @@
 			buildConfigurations = (
 				B5447217237E79760023BC16 /* Debug */,
 				B5447218237E79760023BC16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5F6C6F92399085000004C16 /* Build configuration list for PBXNativeTarget "PICommandLineToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5F6C6F72399085000004C16 /* Debug */,
+				B5F6C6F82399085000004C16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

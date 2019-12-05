@@ -4,6 +4,7 @@
 
 bin/
 xcshareddata/
+.formatter.yml
 
 ## User settings
 xcuserdata/
