@@ -16,6 +16,7 @@ extension NSRegularExpression {
             preconditionFailure("Illegal regular expression: \(pattern).")
         }
     }
+    
     convenience init(_ pattern: String, options: NSRegularExpression.Options = NSRegularExpression.Options.caseInsensitive) {
         do {
             try self.init(pattern: pattern, options: options)
@@ -30,6 +31,7 @@ extension NSRegularExpression {
         let range = NSRange(location: 0, length: string.utf16.count)
         return firstMatch(in: string, options: [], range: range) != nil
     }
+    
     func matches(in string: String, options: NSRegularExpression.MatchingOptions = []) -> [NSTextCheckingResult] {
         return matches(in: string, options: options, range: NSRange(location: 0, length: string.utf16.count))
     }
